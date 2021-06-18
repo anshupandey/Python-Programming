@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            <h1> Customer Registration Web App</h1>
+            <br><Br><br>
+            <table border=3>
+            {% for key,value in data.items() %}
+            <tr>
+                <th>{{key}}</th>
+                <td>{{value}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+            <button><a href="http://127.0.0.1:5000"> GO Back </a></button>
+            </br></br><hr>Designed by ABC<hr>
+        </center>
+    </body>
+</html>
