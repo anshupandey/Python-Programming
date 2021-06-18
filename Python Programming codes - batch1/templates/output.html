@@ -1,0 +1,22 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <center>
+        <h1> My CRM App </h1>
+        <br><br><br>
+        <table border=3>
+        {% for key,value in data.items() %}
+            <tr>
+                <th>{{key}}</th>
+                <td>{{value}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        
+        <br><Br>
+        <button><a href ="http://127.0.0.1:5000">Go Back</a></button>
+        <br><br><br><hr> designed by ABC<hr>
+        </center>
+    </body>
+</html>

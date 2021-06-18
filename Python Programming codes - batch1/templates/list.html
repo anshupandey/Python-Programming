@@ -1,0 +1,25 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <center>
+        <h1> My CRM App </h1>
+        <br><br><br>
+        <table border=3>
+        {% for row in data %}
+            <tr>
+                <th>{{row['EID']}}</th>
+                <td>{{row['name']}}</td>
+                <td>{{row['age']}}</td>
+                <td>{{row['city']}}</td>
+                <td>{{row['email']}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+        
+        <br><Br>
+        <button><a href ="http://127.0.0.1:5000">Go Back</a></button>
+        <br><br><br><hr> designed by ABC<hr>
+        </center>
+    </body>
+</html>
