@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <center>
+            <h1> Welcome to E Commerce App </h1>
+            <hr><hr>
+            <div>
+            {% for pd in prod %}
+            <img src=pd.image>
+            <h4>{{ pd.title }}</h4>
+            <h3>{{ pd.cost }}</h3>
+            <p>{{ pd.description }}</P>
+            <a href="{% url 'product_detail' pd.pk %}">Read more..
+            </a>
+            {% endfor %}
+            </div>
+            
+            <hr><p>Designed by ABC</p><hr>
+        </center>
+    </body>
+</html>
