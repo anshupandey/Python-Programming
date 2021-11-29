@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript" src="static/myfile.js">
+</script>
+</head>
+    <body>
+        <center>
+        <h1> My CRM App</h1><hr><hr>
+        <br>
+        <table border=0><tr>
+        <td><a href="http://127.0.0.1:5000/"><button> Register </button></a></td>
+        <td><a href="http://127.0.0.1:5000/getlist"><button> All Employees </button></a></td>
+        </tr></table>
+        <br><br><br><br>
+        <button onclick="getinfo()">i</button>
+        
+        <form action="/get_data" method="post">
+        Name: <input type="text" name="name"><br><br>
+        Age: <input type="text" name="age"><br><br>
+        City: <input type="text" name="city"><br><br>
+        Email: <input type="text" name="email"><br><br>
+        <input type="submit" value="submit"><br><br>
+        </form>
+        <br><br><br><br>
+        <hr><p> Designed by ABC </p><hr>
+        </center>
+    </body>
+</html>

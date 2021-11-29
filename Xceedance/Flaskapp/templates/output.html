@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <center>
+        <h1> My CRM App</h1><hr><hr>
+        <br>
+        <table border=0><tr>
+        <td><a href="http://127.0.0.1:5000/"><button> Register </button></a></td>
+        <td><a href="http://127.0.0.1:5000/getlist"><button> All Employees </button></a></td>
+        </tr></table>
+        <br><br><br><br>
+        <table border=3>
+        {% for key,value in data.items() %}
+        <tr>
+            <th>{{key}}</th>
+            <td>{{value}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+        
+        <br><br>
+        <br><br>
+        <hr><p> Designed by ABC </p><hr>
+        </center>
+    </body>
+</html>

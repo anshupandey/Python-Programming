@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <center>
+        <h1> My CRM App</h1><hr><hr>
+        <br>
+        <table border=0><tr>
+        <td><a href="http://127.0.0.1:5000/"><button> Register </button></a></td>
+        <td><a href="http://127.0.0.1:5000/getlist"><button> All Employees </button></a></td>
+        </tr></table>
+        <br><br><br><br>
+        <table border=3>
+        {% for row in data %}
+        <tr>
+            <th>{{row[0]}}</th>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+        
+        <br><br>
+        <br><br>
+        <hr><p> Designed by ABC </p><hr>
+        </center>
+    </body>
+</html>
