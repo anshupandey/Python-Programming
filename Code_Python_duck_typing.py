@@ -1,57 +1,57 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Dec 15 09:39:32 2021
+Created on Wed Dec 15 13:42:14 2021
 
 @author: anshu
 """
 
-# Duck Typing in python
+# =============================================================================
+# # Duck Typing
+# 
+#  - related to dynamic typing in programming languages
+#  - type of the object is less important than that of the methods it has
+#  
+# =============================================================================
 
-# relates to Dynamic typing OR dynamic programming
-# type of an object has less significance than the methods it has
-# type of an object is less improtant than what the object
-# can be used for
+x = 5
+x + 3
 
-x = [4,5,3]
+type(x)
+x.__add__(3)
+
+m = [4,5,3]
+len(m)
+
 len(x)
 
-y = "hello"
-len(y)
+m.__len__()
 
-x.__len__()
-
-m = 5
-len(m)
 
 class employee:
     def __init__(self,name,age):
-        self.name = name
         self.age = age
+        self.name = name
         
     def __str__(self):
         return self.name
     
     def __len__(self):
         return self.age
-    
-    def __add__(self,value):
-        return self.age + value
-    
+        
+
 e1 = employee("Anshu",25)
+str(e1)  # it executes e1.__str__()
+len(e1) # it executes e1.__len__()
 
-str(e1) # this will call __str__()
-len(e1) # will trigger e1.__len__()
+#############################################
 
-e1 + 5 # will call e1.__add__(5)
-
-########################################################
 
 class A:
-    country = "India" # class attribute
-    def __init__(self,name,age,city):
-        self.name = name # instance attribute
+    country = "India"
+    def __init__(self,name,age):
+        self.name = name
         self.age = age
-        self.city = city
+    
     def __add__(self,value):
         return self.age + value
     
@@ -59,7 +59,7 @@ class A:
         return self.age - value
     
     def __mul__(self,value):
-        return self.age * value
+        return self.age*value
     
     def __truediv__(self,value):
         return self.age/value
@@ -73,40 +73,47 @@ class A:
     def __bool__(self):
         return True
     
-    def __or__(self):
-        return True
+    def __or__(self,value):
+        return True or value
+    
+    
+k = A("Anshu",20)    
 
-k = A("anshu",20,"delhi")
-
-k +5
-k *2
-k-2
-k/2
+k + 5
+k - 5
+k*2
+k/10
 int(k)
 bool(k)
 k**2
 
-((k+5)*2)/5
-###############################################################
+#######################################################
 
-m = 45613
+m = 456355
+m + 2
+m.__add__(45)
+
 len(m) # this will throw error
-m[1] # this will also throw error - indexing cant be done
+m[0] # this will throw error
 
 
 class mint(int):
     
     def __len__(self):
-        return len(m.__str__())
+        return len(self.__str__())
     
     def __getitem__(self,index):
-        return int(m.__str__()[index])
+        return int(self.__str__()[index])
     
     
-k = mint(45612)
-print(k)
+k = mint(456135)
 type(k)
-len(k)
+print(k)
 k + 5
+k - 2
+k*3
+
+len(k)
+# indexing
 k[0]
 k[2]
