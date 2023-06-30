@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <center>
+            <h1>Welcome to the web page </h1>
+        </center>
+        <br><br>
+        <table><tr><td><a href="http://127.0.0.1:5000">Admin</a></td><td><a href="http://127.0.0.1:5000/explore">Explore</a></td><td><a href="http://127.0.0.1:5000/user">User</a></td></tr></table>
+        <br><br>
+        
+        <table border="2">
+            <tr><th>City ID </th><th>City Name</th><th>City Lat</th><th>City Long</th></tr>
+            {% for row in output %}
+            <tr>
+                <td>{{row[0]}}</td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>{{row[3]}}</td>
+            </tr>
+
+            {% endfor %}
+
+
+
+        </table>
+
+
+        </form>
+        <br><br>
+        <p><hr>Designed by Here Technologies <hr></p>
+    </body>
+</html>

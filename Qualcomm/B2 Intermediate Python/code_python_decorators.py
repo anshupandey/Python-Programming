@@ -119,3 +119,107 @@ def greet(a,**arg):
     return "good morning"
 
 greet(city='Delhi',country="india")
+
+###############################################################
+
+
+# Chaining decorators
+
+def decor1(fun):
+    def wrapper(a):
+        k = fun(a)
+        return k**2
+    return wrapper 
+
+
+def decor2(fun):
+    def wrapper(a):
+        k = fun(a)
+        return k*2
+    return wrapper 
+
+    
+# decor1(decor2(myfun(5)))
+
+@decor1 
+@decor2 
+def myfun(x):
+    return x+3 
+
+myfun(5)
+
+# myfun: 5+3 = 8 => decor2: 8*2 = 16, => decor1: 16**2 = 256
+
+#############################################################
+#############################################################
+
+
+class employee:
+    def __init__(self,name):
+        self.name = name 
+        print("an employee created with name ",self.name)
+        
+    def __call__(self):
+        print("This is an employee object with name ",self.name)
+        
+e = employee("John")
+
+e()
+
+################################################################
+
+class mydecor:
+    def __init__(self,name):
+        self.name = name
+        
+    def __call__(self,fun):
+        def wrapper():
+            out = fun()
+            out = "Hey "+self.name+" "+out
+            return out 
+        return wrapper
+    
+
+@mydecor("Anshu")
+def greet():
+    return "Good Morning"
+
+greet()
+# mydecor("Anshu")(greet)    
+
+
+
+###################################################
+
+
+
+def decor2(fun):
+    print("decor2 is called")
+    def wrapper(a):
+        k = fun(a)
+        return k*2
+    return wrapper 
+
+
+def myfun(x):
+    return x+3 
+
+newfun = decor2(myfun)
+
+newfun(6)
+    
+# decor1(decor2(myfun(5)))
+
+@decor2 
+def myfun(x):
+    return x+3 
+
+#myfun(5)
+
+dir(decor2)
+
+dir(myfun)
+
+help(decor2)
+
+

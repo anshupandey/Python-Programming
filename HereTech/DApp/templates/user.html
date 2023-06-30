@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <center>
+            <h1>Welcome to the web page </h1>
+        </center>
+        <br><br>
+        <table><tr><td><a href="http://127.0.0.1:5000">Admin</a></td><td><a href="http://127.0.0.1:5000/explore">Explore</a></td><td><a href="http://127.0.0.1:5000/user">User</a></td></tr></table>
+        <br><br>
+        
+        <form action="/getDist" method="post" >
+            City 1: <select name="city1">
+                {% for row in output %}
+                <option value={{row[0]}}>{{row[1]}}</option>
+                {% endfor %}
+            </select><br><br>
+
+            City 2: <select name="city2">
+                {% for row in output %}
+                <option value={{row[0]}}>{{row[1]}}</option>
+                {% endfor %}
+            </select>
+            <input type="submit">
+
+        </form>
+        <br><br>
+        <p><hr>Designed by Here Technologies <hr></p>
+    </body>
+</html>

@@ -11,3 +11,11 @@ class myclass:
         
     def myfun(self,a,b):
         return a + b
+    
+   
+print("hey hi")
+print("how are you")
+
+
+if "__main__"==__name__:
+    print("I am good")
